@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: TColor.bg,
         appBarTheme: AppBarTheme(
           elevation: 0,
+          backgroundColor: TColor.primary,
         ),
         colorScheme: ColorScheme.fromSeed(seedColor: TColor.primary),
         useMaterial3: true,

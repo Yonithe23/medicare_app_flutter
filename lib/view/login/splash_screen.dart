@@ -2,7 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:medicare_app_flutter/common/color_extension.dart';
-import 'package:medicare_app_flutter/view/login/on_boardning_screen.dart';
+//import 'package:medicare_app_flutter/view/login/on_boardning_screen.dart';
+import 'package:medicare_app_flutter/view/login/select_city_screen.dart';
 
 // A stateful widget for the Splash Screen.
 class SplashScreen extends StatefulWidget {
@@ -29,7 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   // Navigate to the onboarding screen.
   void navigateToNextScreen() {
-    context.push(const OnBoardningScreen());
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(builder: (context) => SelectCityScreen()),
+        (_) => false);
   }
 
   @override
